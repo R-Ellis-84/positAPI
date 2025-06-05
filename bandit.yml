@@ -2,9 +2,9 @@ name: Bandit Security Scan
 
 on:
   pull_request:
-    branches: [ main ]  # or the branch you're protecting
+    branches: [ master ]
   push:
-    branches: [ main ]
+    branches: [ master ]
 
 jobs:
   bandit:
@@ -17,7 +17,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: '3.11'  # Match your version
+        python-version: '3.11' 
 
     - name: Install Bandit
       run: pip install bandit
